@@ -25,8 +25,8 @@ def getUser(name):
        print("=" * 30)
        print("Minecraft Java perfil")
        print(f"Name: {mcName}")
-       print(f"Body URL: {mcBody}")
-       print(f"Skin URL: {mcSkin}")
+       print(f"Body URL: {Fore.CYAN}{mcBody}{Fore.MAGENTA}")
+       print(f"Skin URL: {Fore.CYAN}{mcSkin}{Fore.MAGENTA}")
        print("=" * 30)
        print("\n")
        showInput()
@@ -44,7 +44,7 @@ def showInput():
     if not edit.lower().startswith("exit"):
        getUser(edit)
     else:
-       print(f"{Fore.YELLOW}Success EXIT")
+       print(f"{Fore.YELLOW}Success EXIT{Style.RESET_ALL}")
        sys.exit
 
 if __name__ == "__main__":
