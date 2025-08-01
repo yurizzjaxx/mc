@@ -1,8 +1,9 @@
 import requests
 import os
 import sys
-import time
 import json
+from colorama import Fore, Back, Style
+from time import strftime, localtime, sleep
 
 
 def getUser(name):
@@ -20,7 +21,7 @@ def getUser(name):
        mcBody = f"{mcList}/body/{mcId}"
        mcSkin = f"{mcList}/skin/{mcId}"
 
-       print("\n")
+       print(f"{Fore.MAGENTA}\n")
        print("=" * 30)
        print("Minecraft Java perfil")
        print(f"Name: {mcName}")
@@ -30,7 +31,7 @@ def getUser(name):
        print("\n")
        showInput()
     else:
-       print("\n")
+       print(f"{Fore.RED}\n")
        print("=" * 30)
        print(" " * 5, "Failed user local")
        print("=" * 30)
@@ -39,11 +40,11 @@ def getUser(name):
 
 
 def showInput():
-    edit = input("user-name: ")
-    if not edit.startswith("exit"):
+    edit = input(f"{Fore.GREEN}{strftime('%H:%M.%S', localtime())} | user-name: ")
+    if not edit.lower().startswith("exit"):
        getUser(edit)
     else:
-       print("Success EXIT")
+       print(f"{Fore.YELLOW}Success EXIT")
        sys.exit
 
 if __name__ == "__main__":
@@ -51,32 +52,7 @@ if __name__ == "__main__":
        bars = i // 2
        sys.stdout.write('\rloading data %d%%: %s' % (i, "#" * bars))
        sys.stdout.flush()
-       time.sleep(0.1)
+       sleep(0.1)
    print()
-   print("""
-   
-          _____                    _____          
-         /\    \                  /\    \         
-        /::\____\                /::\    \        
-       /::::|   |               /::::\    \       
-      /:::::|   |              /::::::\    \      
-     /::::::|   |             /:::/\:::\    \     
-    /:::/|::|   |            /:::/  \:::\    \    
-   /:::/ |::|   |           /:::/    \:::\    \   
-  /:::/  |::|___|______    /:::/    / \:::\    \  
- /:::/   |::::::::\    \  /:::/    /   \:::\    \ 
-/:::/    |:::::::::\____\/:::/____/     \:::\____\
-\::/    / ~~~~~/:::/    /\:::\    \      \::/    /
- \/____/      /:::/    /  \:::\    \      \/____/ 
-             /:::/    /    \:::\    \             
-            /:::/    /      \:::\    \            
-           /:::/    /        \:::\    \           
-          /:::/    /          \:::\    \          
-         /:::/    /            \:::\    \         
-        /:::/    /              \:::\____\        
-        \::/    /                \::/    / ======================--       
-         \/____/                  \/____/  yuriZzJaxx:::...   
-                                    ======================--
-
-                                                  """)
+   print("Success")
    showInput()
