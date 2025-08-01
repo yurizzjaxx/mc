@@ -64,6 +64,6 @@ if __name__ == "__main__":
 /**   /    /**//**    **       //****   /** 
 /**        /** //******         //**    ****
 //         //   //////           //    //// 
-                {Fore.YELLOW}/BY YURIZZJAXX:::...
+            {Fore.YELLOW}/BY YURIZZJAXX:::...
    """)
    showInput()
