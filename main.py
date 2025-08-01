@@ -54,7 +54,7 @@ if __name__ == "__main__":
        sys.stdout.flush()
        sleep(0.1)
    print()
-   print("""
+   print(f"""{Fore.CYAN}
    
  ****     ****   ******                  ** 
 /**/**   **/**  **////**                *** 
@@ -64,6 +64,6 @@ if __name__ == "__main__":
 /**   /    /**//**    **       //****   /** 
 /**        /** //******         //**    ****
 //         //   //////           //    //// 
-                /BY YURIZZJAXX:::...
+                {Fore.YELLOW}/BY YURIZZJAXX:::...
    """)
    showInput()
